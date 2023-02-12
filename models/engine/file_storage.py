@@ -52,4 +52,4 @@ class FileStorage():
             with open(FileStorage.__file_path, "r", encoding="utf-8") as js_f:
                 for key, obj in json.loads(js_f.read()).items():
                     obj = eval(obj['__class__'])(**obj)
-                    FileStorage.__objects[key] = 
+                    FileStorage.__objects[key] = obj
